@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saad Store - Smart Shopping Experience</title>
+
+  <link rel="stylesheet" href="saad.css"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Saad Store</span>
+      </div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#cart">Cart</a>
+      </div>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search products...">
+        <i class="fa fa-search"></i>
+      </div>
+
+      <div class="nav-icons">
+        <button id="themeToggle">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <div class="cart-icon" id="cartBtn">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cartCount">0</span>
+        </div>
+
+        <div class="menu-btn" id="menuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1>Smart Shopping Experience</h1>
+      <p>
+        Premium electronics, fashion, gaming accessories & more.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#products" class="btn primary-btn">Shop Now</a>
+        <a href="#categories" class="btn secondary-btn">Explore</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories" id="categories">
+    <h2 class="section-title">Popular Categories</h2>
+
+    <div class="category-grid">
+      <div class="category-card">Electronics</div>
+      <div class="category-card">Fashion</div>
+      <div class="category-card">Shoes</div>
+      <div class="category-card">Watches</div>
+      <div class="category-card">Headphones</div>
+      <div class="category-card">Gaming</div>
+      <div class="category-card">Mobile Accessories</div>
+    </div>
+  </section>
+
+  <!-- Featured Slider -->
+  <section class="featured-slider">
+    <h2 class="section-title">Trending Deals</h2>
+
+    <div class="slider">
+      <div class="slide">🔥 50% OFF Gaming Headsets</div>
+      <div class="slide">⌚ Luxury Watches Collection</div>
+      <div class="slide">🎧 Premium Sound Experience</div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products-section" id="products">
+    <div class="products-header">
+      <h2 class="section-title">Featured Products</h2>
+
+      <select id="filterCategory">
+        <option value="all">All Categories</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Shoes">Shoes</option>
+        <option value="Watches">Watches</option>
+        <option value="Headphones">Headphones</option>
+        <option value="Gaming">Gaming</option>
+      </select>
+    </div>
+
+    <div class="products-grid" id="productsGrid"></div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews">
+    <h2 class="section-title">Customer Reviews</h2>
+
+    <div class="review-grid">
+
+      <div class="review-card">
+        <img src="https://i.pravatar.cc/100?img=1">
+        <h4>Ali Khan</h4>
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>Amazing shopping experience. Fast delivery and premium quality.</p>
+      </div>
+
+      <div class="review-card">
+        <img src="https://i.pravatar.cc/100?img=2">
+        <h4>Ahmed</h4>
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>Best ecommerce UI and products look very professional.</p>
+      </div>
+
+      <div class="review-card">
+        <img src="https://i.pravatar.cc/100?img=3">
+        <h4>Saad</h4>
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>Great support and smooth ordering process through WhatsApp.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <h2>Subscribe Newsletter</h2>
+    <p>Get latest offers and product updates.</p>
+
+    <div class="newsletter-box">
+      <input type="email" placeholder="Enter your email">
+      <button>Subscribe</button>
+      <p id="subscribeMessage"></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-grid">
+
+      <div>
+        <h3>Saad Store</h3>
+        <p>Smart Shopping Experience with premium products.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Categories</a>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p>Email: saadaliedior6@gmail.com</p>
+        <p>Phone: +923476719429</p>
+      </div>
+
+      <div>
+        <h3>Follow Us</h3>
+
+        <div class="social-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Saad Store. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/923476719429" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cartSidebar">
+
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button id="closeCart">
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-footer">
+      <h3>Total: <span id="cartTotal">$0</span></h3>
+
+      <button class="order-btn" id="orderBtn">
+        Place Order
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="saad.js"></script>
+</body>
+</html>
